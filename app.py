@@ -113,4 +113,5 @@ def get_qr(id):
     return send_file(path, mimetype='image/png')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
+
