@@ -1,0 +1,7 @@
+services:
+  hubserver:
+    build: .
+    ports:
+      - "15000:5000"
+    volumes:
+      - .:/app
