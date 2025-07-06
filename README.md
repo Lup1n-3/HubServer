@@ -21,15 +21,19 @@ Su diseño está inspirado en herramientas como Portainer, soporte para imágene
 ## Capturas de Pantalla
 
 ### Vista principal: listado de servidores
+  Aqui podemos ver el listado de los servidores.
 ![Home](docs/img/home.png)
 
 ### Agregar servidor
+  Aqui agregamos los servers que querramos con su IP y su imagen si queremos y nos generara un QR que el escanearlo nos envia directo a los detalles internos.
 ![Agregar Servidor](docs/img/add_server.png)
 
 ### Vista de un servidor y sus servicios
+  Aqui apareceremos al escanear el QR y podemos agregar los servicios que tengamos dentro del servidor.
 ![Detalle Servidor](docs/img/server_details.png)
 
 ### Modal de edición de servicios
+  Si nos equivocamos o debemos modificar algo se puede hacer desde el boton de edicion o podemos borrarlo si queremos.
 ![Editar Servicio](docs/img/edit_service.png)
 
 ---
