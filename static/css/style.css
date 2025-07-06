@@ -71,19 +71,21 @@ input::placeholder, textarea::placeholder {
     color: #aaa;
 }
 
-.btn {
-    background-color: #4a90e2;
+.btn, .btn-modern {
+    background-color: #3d5afe;
     border: none;
     color: white;
-    padding: 8px 16px;
+    padding: 8px 18px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 14px;
     cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
 }
 
-.btn:hover {
-    background-color: #3c7cd4;
+.btn:hover, .btn-modern:hover {
+    background-color: #304ffe;
 }
 
 .btn-secondary {
@@ -187,6 +189,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-close {
     filter: invert(1);
 }
+
 .modal-backdrop.show {
     opacity: 0.6;
     backdrop-filter: blur(2px);
@@ -198,4 +201,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal-dialog {
     z-index: 1060;
+}
+.btn-primary {
+    background-color: #3d5afe !important;
+    border: none !important;
+    color: white !important;
+    padding: 8px 18px !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #304ffe !important;
 }
