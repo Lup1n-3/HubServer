@@ -27,7 +27,7 @@ Su diseño está inspirado en herramientas como Portainer, soporte para imágene
 ![Agregar Servidor](docs/img/add_server.png)
 
 ### Vista de un servidor y sus servicios
-![Detalle Servidor](docs/img/server_detail.png)
+![Detalle Servidor](docs/img/server_details.png)
 
 ### Modal de edición de servicios
 ![Editar Servicio](docs/img/edit_service.png)
