@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Servicio</title>
+</head>
+<body>
+  <h1>Editar Servicio</h1>
+  <form method="POST" enctype="multipart/form-data">
+    <label>Nombre:</label><input type="text" name="name" value="{{ service.name }}" required><br>
+    <label>Dirección:</label><input type="text" name="address" value="{{ service.address }}" required><br>
+    <label>Información:</label><input type="text" name="info" value="{{ service.info }}"><br>
+    <label>Ícono:</label><input type="file" name="icon"><br>
+    <button type="submit">Guardar</button>
+  </form>
+</body>
+</html>
