@@ -1,0 +1,201 @@
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #181a1b;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #202124;
+    color: white;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.sidebar a:hover {
+    background-color: #2e2f31;
+}
+
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    background-color: #181a1b;
+}
+
+.card {
+    background-color: #262a2e;
+    color: #f0f0f0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.card img {
+    border-radius: 6px;
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px 0;
+    background-color: #2e3035;
+    color: #ffffff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74,144,226,0.2);
+}
+
+input::placeholder, textarea::placeholder {
+    color: #aaa;
+}
+
+.btn {
+    background-color: #4a90e2;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3c7cd4;
+}
+
+.btn-secondary {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.table {
+    background-color: #2e3035;
+    color: #f0f0f0;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 8px;
+    border: 1px solid #444;
+    background-color: #2e3035;
+    color: #e0e0e0;
+}
+
+.modal-content {
+    background-color: #2a2d31;
+    color: #f1f1f1;
+    border: 1px solid #444;
+}
+
+.modal-header, .modal-footer {
+    border-color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+
+.service-icon {
+    height: 32px;
+    width: 32px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.card, .form-container, .form-box {
+    background-color: #2a2d31 !important;
+    color: #f1f1f1 !important;
+    border: 1px solid #444 !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card input, .card select, .card textarea {
+    background-color: #2e3035 !important;
+    color: #ffffff !important;
+    border: 1px solid #555 !important;
+}
+
+.card input::placeholder, 
+.card textarea::placeholder {
+    color: #bbb !important;
+}
+
+.card .btn {
+    background-color: #3d5afe !important;
+    color: white !important;
+    border: none !important;
+}
+
+.modal-content {
+    background-color: #2a2d31 !important;
+    color: #f1f1f1 !important;
+    border: 1px solid #444 !important;
+}
+
+.modal-header, .modal-footer {
+    border-color: #444 !important;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    background-color: #2e3035 !important;
+    color: #ffffff !important;
+    border: 1px solid #555 !important;
+}
+
+.modal-content input::placeholder,
+.modal-content textarea::placeholder {
+    color: #bbb !important;
+}
+
+.modal-content .btn {
+    background-color: #3d5afe !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+.modal-backdrop.show {
+    opacity: 0.6;
+    backdrop-filter: blur(2px);
+}
+
+.modal {
+    z-index: 1055;
+}
+
+.modal-dialog {
+    z-index: 1060;
+}

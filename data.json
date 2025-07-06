@@ -1,0 +1,16 @@
+[
+  {
+    "id": "bc593d14-0564-4f71-8e26-f74d24e53d43",
+    "name": "d",
+    "ip": "d",
+    "image": "",
+    "services": [
+      {
+        "sid": "180638a2-df52-4da8-ab5d-5e06d4de6d63",
+        "name": "d",
+        "address": "d",
+        "icon": ""
+      }
+    ]
+  }
+]
