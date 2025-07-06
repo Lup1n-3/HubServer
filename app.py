@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request, redirect, url_for, send_file
 import json, os, uuid
 import qrcode
@@ -68,7 +67,8 @@ def add_service(id):
                 "sid": str(uuid.uuid4()),
                 "name": request.form["name"],
                 "address": request.form["address"],
-                "icon": icon_name
+                "icon": icon_name,
+                "info": request.form.get("info", "")
             })
             break
     save_data(data)
@@ -93,6 +93,7 @@ def edit_service(server_id, sid):
                 if srv["sid"] == sid:
                     srv["name"] = request.form["name"]
                     srv["address"] = request.form["address"]
+                    srv["info"] = request.form.get("info", "")
                     icon = request.files.get("icon")
                     if icon and icon.filename:
                         icon_name = str(uuid.uuid4()) + "_" + icon.filename
@@ -102,7 +103,6 @@ def edit_service(server_id, sid):
             break
     save_data(data)
     return redirect(url_for("server_detail", id=server_id))
-
 
 @app.route("/qr/<id>")
 def get_qr(id):
@@ -114,4 +114,3 @@ def get_qr(id):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
-
