@@ -1,12 +1,12 @@
-# HubServer 🔧🖥️
+# HubServer 
 
 **HubServer** es una aplicación web para visualizar, administrar y documentar múltiples servidores locales o remotos, junto con sus servicios asociados. Diseñada para entornos técnicos como laboratorios caseros, redes de desarrollo, servidores Docker, Proxmox, Kubernetes, NAS y más.
 
-Su diseño está inspirado en herramientas como Portainer, con una estética profesional, soporte para imágenes, CRUD completo y generación de códigos QR para acceder rápidamente desde el móvil.
+Su diseño está inspirado en herramientas como Portainer, soporte para imágenes, CRUD completo y generación de códigos QR para acceder rápidamente desde el móvil.
 
 ---
 
-## 🧩 ¿Qué puedo hacer con HubServer?
+## ¿Qué puedo hacer con HubServer?
 
 - Registrar **múltiples servidores** en red con nombre, IP principal e imagen personalizada.
 - Asociar a cada servidor uno o más **servicios** (por ejemplo: interfaces web, APIs, paneles, etc.).
@@ -18,7 +18,7 @@ Su diseño está inspirado en herramientas como Portainer, con una estética pro
 
 ---
 
-## 🖼️ Capturas de Pantalla
+## Capturas de Pantalla
 
 ### Vista principal: listado de servidores
 ![Home](docs/img/home.png)
@@ -34,21 +34,47 @@ Su diseño está inspirado en herramientas como Portainer, con una estética pro
 
 ---
 
-## ⚙️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Python 3.11**
 - **Flask** como framework web
-- **Bootstrap 5.3** para diseño moderno y responsive
+- **Bootstrap 5.3**
 - **Docker** y **Docker Compose** para despliegue fácil
 - **QRCode** (librería `qrcode`) para generación de códigos QR
 - Almacenamiento en archivo JSON (sin base de datos)
 
 ---
-
-## 🚀 Instalación rápida con Docker Compose
-
-### 1. Clona el repositorio
+###  1. Clona el repositorio y despliega con Docker (persistente)
 
 ```bash
 git clone https://github.com/tuusuario/HubServer.git
 cd HubServer
+```
+
+###  2. Levanta la aplicación de forma persistente
+
+```bash
+docker-compose up -d
+```
+
+>  Este comando:
+> - Construye la imagen si es la primera vez.
+> - Crea los volúmenes para guardar tus datos e imágenes.
+> - Levanta el servidor Flask en el puerto `15000`.
+> - **Y si el equipo se reinicia, el contenedor vuelve a arrancar automáticamente** gracias a `restart: always` en el `docker-compose.yml`.
+
+### Persistencia de datos garantizada
+
+- Todos los datos se guardan en:
+  - `data.json` → base del sistema.
+  - `static/images/` → imágenes de los servidores.
+  - `static/service_icons/` → íconos personalizados de los servicios.
+
+ **Nada se borra** al apagar el contenedor o reiniciar el host, porque estos directorios están montados como volúmenes.
+
+### Asegurar que Docker arranque con el sistema
+
+```bash
+sudo systemctl enable docker
+```
+
