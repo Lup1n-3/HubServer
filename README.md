@@ -76,9 +76,4 @@ docker-compose up -d
 
  **Nada se borra** al apagar el contenedor o reiniciar el host, porque estos directorios están montados como volúmenes.
 
-### Asegurar que Docker arranque con el sistema
-
-```bash
-sudo systemctl enable docker
-```
 
